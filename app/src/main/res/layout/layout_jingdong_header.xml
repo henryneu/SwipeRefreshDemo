@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<neu.cn.swiperefreshdemo.customview.JingDongRefreshHeaderView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_refresh"
+        android:layout_width="46dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/image_view_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/animation_list_refresh_jd"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:transformPivotX="0dp"
+            android:transformPivotY="30dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view_speed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/linear_layout_refresh"
+        android:background="@drawable/jd_speed"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_view_box"
+        android:layout_width="16dp"
+        android:layout_height="12dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-15dp"
+        android:layout_toRightOf="@id/linear_layout_refresh"
+        android:background="@drawable/jd_box"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:visibility="visible"/>
+
+</neu.cn.swiperefreshdemo.customview.JingDongRefreshHeaderView>

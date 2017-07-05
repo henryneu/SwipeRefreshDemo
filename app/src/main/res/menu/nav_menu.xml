@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_weather"
+            android:title="WeatherRefresh" />
+
+        <item
+            android:id="@+id/nav_jingdong"
+            android:title="JingDongFrfresh" />
+
+        <item
+            android:id="@+id/nav_tianmao"
+            android:title="TianMaoRefresh" />
+
+        <item
+            android:id="@+id/nav_weibo"
+            android:title="WeiBoRefresh" />
+
+        <item
+            android:id="@+id/nav_meituanwaimai"
+            android:title="MeiTuanWaiMaiRefresh" />
+
+        <item
+            android:id="@+id/nav_elema"
+            android:title="ELeMaRefresh"/>
+
+        <item
+            android:id="@+id/nav_baiduwaimai"
+            android:title="BaiDuWaiMaiRefresh"/>
+
+    </group>
+
+</menu>
