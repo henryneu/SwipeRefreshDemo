@@ -24,21 +24,21 @@ public class BaiDuRefreshHeaderView extends SwipeRefreshHeaderLayout {
     private Animation pull_back_anim_left_linear;
     private Animation pull_back_anim_right_linear;
 
-    private ImageView iv_sun;
-    private ImageView ivRefresh;
-    private ImageView iv_back_cloud;
-    private ImageView iv_back_cloud2;
-    private ImageView iv_back_castle;
-    private ImageView iv_back_castle2;
+    private ImageView imageViewSun;
+    private ImageView imageViewRefresh;
+    private ImageView imageViewCloud;
+    private ImageView imageViewCloud2;
+    private ImageView imageViewCastle;
+    private ImageView imageViewCastle2;
 
     private AnimationDrawable mAnimationDrawable;
 
     public BaiDuRefreshHeaderView(Context context) {
-        super(context);
+        this(context, null);
     }
 
     public BaiDuRefreshHeaderView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
     public BaiDuRefreshHeaderView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -56,17 +56,16 @@ public class BaiDuRefreshHeaderView extends SwipeRefreshHeaderLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ivRefresh = (ImageView) findViewById(R.id.image_view_refresh);
-        iv_sun = (ImageView) findViewById(R.id.image_view_sun);
-        iv_back_cloud = (ImageView) findViewById(R.id.image_view_back_cloud);
-        iv_back_cloud2 = (ImageView) findViewById(R.id.image_view_back_cloud2);
-        iv_back_castle = (ImageView) findViewById(R.id.image_view_back_castle);
-        iv_back_castle2 = (ImageView) findViewById(R.id.image_view_back_castle2);
-        mAnimationDrawable = (AnimationDrawable) ivRefresh.getBackground();
+        imageViewRefresh = (ImageView) findViewById(R.id.image_view_refresh);
+        imageViewSun = (ImageView) findViewById(R.id.image_view_sun);
+        imageViewCloud = (ImageView) findViewById(R.id.image_view_back_cloud);
+        imageViewCloud2 = (ImageView) findViewById(R.id.image_view_back_cloud2);
+        imageViewCastle = (ImageView) findViewById(R.id.image_view_back_castle);
+        imageViewCastle2 = (ImageView) findViewById(R.id.image_view_back_castle2);
+        mAnimationDrawable = (AnimationDrawable) imageViewRefresh.getBackground();
 
         //开启动画
         openAnimation();
-
     }
 
     private void openAnimation() {
@@ -75,29 +74,28 @@ public class BaiDuRefreshHeaderView extends SwipeRefreshHeaderLayout {
             mAnimationDrawable.start();
         }
 
-        iv_sun.clearAnimation();
-        iv_back_cloud.clearAnimation();
-        iv_back_cloud2.clearAnimation();
-        iv_back_castle.clearAnimation();
-        iv_back_castle2.clearAnimation();
+        imageViewSun.clearAnimation();
+        imageViewCloud.clearAnimation();
+        imageViewCloud2.clearAnimation();
+        imageViewCastle.clearAnimation();
+        imageViewCastle2.clearAnimation();
 
-        iv_sun.startAnimation(rotateAnimation);
-        iv_back_cloud.startAnimation(pull_back_anim_left_cloud_linear);
-        iv_back_cloud2.startAnimation(pull_back_anim_right_cloud_linear);
-        iv_back_castle.startAnimation(pull_back_anim_left_linear);
-        iv_back_castle2.startAnimation(pull_back_anim_right_linear);
+        imageViewSun.startAnimation(rotateAnimation);
+        imageViewCloud.startAnimation(pull_back_anim_left_cloud_linear);
+        imageViewCloud2.startAnimation(pull_back_anim_right_cloud_linear);
+        imageViewCastle.startAnimation(pull_back_anim_left_linear);
+        imageViewCastle2.startAnimation(pull_back_anim_right_linear);
     }
 
     @Override
     public void onRefresh() {
-
-
     }
 
     @Override
     public void onPrepare() {
-        // 开启动画
+        //开启动画
         openAnimation();
+
     }
 
     @Override
@@ -120,11 +118,11 @@ public class BaiDuRefreshHeaderView extends SwipeRefreshHeaderLayout {
     @Override
     public void onReset() {
         mAnimationDrawable.stop();
-        iv_sun.clearAnimation();
-        iv_back_cloud.clearAnimation();
-        iv_back_cloud2.clearAnimation();
-        iv_back_castle.clearAnimation();
-        iv_back_castle2.clearAnimation();
+        imageViewSun.clearAnimation();
+        imageViewCloud.clearAnimation();
+        imageViewCloud2.clearAnimation();
+        imageViewCastle.clearAnimation();
+        imageViewCastle2.clearAnimation();
     }
 
     private OnMoveListener onMoveListener;
