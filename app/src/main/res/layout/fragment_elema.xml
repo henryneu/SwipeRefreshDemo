@@ -17,7 +17,7 @@
             android:id="@id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"
+            android:background="#1E90FF"
             android:gravity="center"
             android:text="下拉刷新"
             android:textSize="24sp" />

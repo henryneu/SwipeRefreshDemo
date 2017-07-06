@@ -43,6 +43,6 @@
         android:background="@drawable/jd_box"
         android:scaleX="0.5"
         android:scaleY="0.5"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
 </neu.cn.swiperefreshdemo.customview.JingDongRefreshHeaderView>

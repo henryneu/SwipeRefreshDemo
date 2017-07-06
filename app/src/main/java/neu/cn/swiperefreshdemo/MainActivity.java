@@ -1,6 +1,7 @@
 package neu.cn.swiperefreshdemo;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +10,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import neu.cn.swiperefreshdemo.fragment.BaiDuRefreshFragment;
 import neu.cn.swiperefreshdemo.fragment.ELeMaRefreshFragment;
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private NavigationView mNavigationView;
 
+    private FloatingActionButton mFloatingActionButton;
+
     private FragmentManager mFragmentManager = getSupportFragmentManager();
 
     @Override
@@ -32,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.floating_action_button);
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "觉得不错点个赞吧！", Toast.LENGTH_SHORT).show();
+            }
+        });
         setSupportActionBar(toolbar);
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -39,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+        // 开始默认打开第一个下拉刷新效果
+        getSupportActionBar().setTitle("WeatherRefreshHeader");
+        WeatherFragment weatherFragment = new WeatherFragment();
+        mFragmentManager.beginTransaction().replace(R.id.content_frame, weatherFragment).commit();
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {

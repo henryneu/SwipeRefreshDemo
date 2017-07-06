@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/icon_weather_sun"/>
+                android:background="@drawable/icon_weather_sun" />
 
         </RelativeLayout>
 
@@ -32,7 +32,7 @@
             android:layout_marginTop="4dp"
             android:text="刷新成功"
             android:textColor="#FFFFFF"
-            android:textSize="10sp"/>
+            android:textSize="10sp" />
 
     </RelativeLayout>
 

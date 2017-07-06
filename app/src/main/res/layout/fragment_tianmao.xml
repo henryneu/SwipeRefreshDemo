@@ -11,17 +11,17 @@
 
         <include
             android:id="@id/swipe_refresh_header"
-            layout="@layout/layout_tianmao_header"/>
+            layout="@layout/layout_tianmao_header" />
 
         <TextView
             android:id="@id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ef3939"
+            android:background="#EF3939"
             android:gravity="center"
             android:text="下拉刷新"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
     </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
 

@@ -16,10 +16,10 @@
             android:id="@id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"
+            android:background="#70DB93"
             android:gravity="center"
-            android:text="下拉刷新"
-            android:textSize="24sp" />
+            android:text="下拉刷新，滑出菜单栏切换刷新效果"
+            android:textSize="22sp" />
 
     </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
 

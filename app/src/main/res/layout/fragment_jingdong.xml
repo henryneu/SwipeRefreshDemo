@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary" >
+    android:background="@color/colorPrimary">
 
     <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
         android:id="@+id/swipe_to_loadlayout"
@@ -12,16 +11,16 @@
 
         <include
             android:id="@id/swipe_refresh_header"
-            layout="@layout/layout_jingdong_header"/>
+            layout="@layout/layout_jingdong_header" />
 
         <TextView
             android:id="@id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"
+            android:background="#FF0000"
             android:gravity="center"
             android:text="下拉刷新"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
     </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
 

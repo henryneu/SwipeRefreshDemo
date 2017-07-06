@@ -5,31 +5,38 @@
 
         <item
             android:id="@+id/nav_weather"
+            android:icon="@drawable/nav_mail"
             android:title="WeatherRefresh" />
 
         <item
             android:id="@+id/nav_jingdong"
+            android:icon="@drawable/nav_mail"
             android:title="JingDongFrfresh" />
 
         <item
             android:id="@+id/nav_tianmao"
+            android:icon="@drawable/nav_mail"
             android:title="TianMaoRefresh" />
 
         <item
             android:id="@+id/nav_weibo"
+            android:icon="@drawable/nav_mail"
             android:title="WeiBoRefresh" />
 
         <item
             android:id="@+id/nav_meituanwaimai"
+            android:icon="@drawable/nav_mail"
             android:title="MeiTuanWaiMaiRefresh" />
 
         <item
             android:id="@+id/nav_elema"
-            android:title="ELeMaRefresh"/>
+            android:icon="@drawable/nav_mail"
+            android:title="ELeMaRefresh" />
 
         <item
             android:id="@+id/nav_baiduwaimai"
-            android:title="BaiDuWaiMaiRefresh"/>
+            android:icon="@drawable/nav_mail"
+            android:title="BaiDuWaiMaiRefresh" />
 
     </group>
 
